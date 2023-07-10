@@ -18,3 +18,45 @@ body {
     transform: scale(1.05);
     box-shadow: 0 0 11px rgba(33, 33, 33, .2);
 }
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(-100%);
+    filter: blur(5px);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.p :nth-child() {
+    transition: 200ms;
+}
+
+.hidden2 {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(100%);
+    filter: blur(5px);
+}
+
+.show2 {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden2 {
+        transition: none;
+    }
+}
