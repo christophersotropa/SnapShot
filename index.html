@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,regular,500,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>SnapShot</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top" style="filter: drop-shadow(5px 2px 17px #000);">
+        <a class="navbar-brand ml-3" href="index.html"><img src="imgs/logo.png" height="30" width="30" /></a>
+        <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#snapNavbar">
+            <span class="navbar-toggler-icon navbar-dark"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="snapNavbar">
+            <ul class="navbar-nav ml-auto mr-3">
+                <li class="nav-item active"><a class="nav-link text-dark" href="#"><i class="fa fa-home fa-lg"></i>
+                        Home</a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#"><i class="fa fa-info fa-lg"></i>
+                        About</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#"><i class="fa fa-address-card fa-lg"></i>
+                        Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- SIGNUP -->
+    <div class="bg-image" style="background-image: url(imgs/backgroundimage.jpg); height: 550px; background-position: center; background-size: cover;   background-attachment: fixed;
+        ">
+        <div class="container pt-3"
+            style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-light" style="filter: drop-shadow(5px 2px 17px #000);">Join the Newsletter</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col pt-2">
+                    <input id="email" class="form-control" name="email" placeholder="Enter Email..." style="filter: drop-shadow(5px 2px 17px #000); 
+                        width: 350px; background: transparent;
+                        border: 2px solid white;
+                        color: white;">
+                    </input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col pt-3">
+                    <input type="submit" class="btn btn-md btn-light shadow" name="submit"
+                        style="filter: drop-shadow(5px 2px 17px #000);"></input>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARDS -->
+    <div class="container pt-5 pb-5">
+        <div class="row row-content">
+            <div class="col col-xs-3 col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="imgs/ourmission.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">[OUR MISSION]</h5>
+                        <p class="card-text">At SnapShot we work on empowering small creators and underlooked talent.
+                            Join today to help support the
+                            cause.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-10 col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="imgs/communitywhyus.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">[WHY US?]</h5>
+                        <p class="card-text">Our welcoming community loves helping one another and our team will make
+                            sure to help you with any questions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="imgs/aboutuschris.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">[ABOUT US]</h5>
+                        <p class="card-text">Created by <b>Christopher Sotropa.</b> Idea created after seeing countless
+                            talent
+                            on social media being overlooked.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SCRIPTS -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
