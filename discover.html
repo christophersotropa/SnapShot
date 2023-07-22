@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,regular,500,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>SnapShot</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top rounded"
+        style="filter: drop-shadow(5px 2px 17px #d7d7d7);">
+        <a class="navbar-brand ml-3" href="index.html"><img src="imgs/logo.png" height="30" width="30" /></a>
+        <nav class="navbar navbar-light">
+            <form class="form-inline">
+                <input class="form-control rounded" id="search" type="search" placeholder="Search SnapShot"
+                    aria-label="Search">
+            </form>
+        </nav>
+        <div class=" dropdown ml-auto mr-3">
+            <img src="imgs/notification.png" class="mr-3" style="width: 25px;
+                height: 25px;
+                border-radius: 50%;" alt="Profile Picture" class="profile-picture dropdown-toggle"
+                id="dropdownMenuButton" data-toggle="#" aria-haspopup="true" aria-expanded="false">
+            <img src="imgs/pfp.jpg" style="width: 40px;
+                height: 40px;
+                border-radius: 50%;" alt="Profile Picture " class="profile-picture dropdown-toggle"
+                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="dropdown-menu dropdown-menu-right mt-3" aria-labelledby="dropdownMenuButton"
+                style="min-width: 250px;">
+                <div class="d-flex align-items-center">
+                    <img class="ml-3" src="imgs/pfp.jpg" style="width: 40px;
+                        height: 40px;
+                        border-radius: 50%;" alt="Profile Picture">
+                    <a class="ml-3" style="text-decoration: none; color: black;">User 1</a>
+                </div>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">My Profile<i
+                        class="fas fa-solid fa-user" style="background-color: #bdbdbd; border-radius: 50%;"></i></a>
+                <a class="dropdown-item  d-flex justify-content-between align-items-center"
+                    href="profilepage.html">Settings &
+                    Privacy<i class="fas fa-solid fa-gear"
+                        style="background-color: #bdbdbd; border-radius: 50%;"></i></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item  d-flex justify-content-between align-items-center" href="#">Log Out<i
+                        class="fas fa-solid fa-right-from-bracket"
+                        style="background-color: #bdbdbd; border-radius: 50%;"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        <div id="left-contain" class="container pt-4 bg-light rounded ml-4 mt-4" style="position: fixed;">
+            <!-- LEFT -->
+            <div class="left">
+                <a class="profile" style="text-decoration: none;">
+                    <div class="profile-pic" style="display: flex;">
+                        <img src="imgs/pfp.jpg" width="40" height="40" id="pfp" />
+                        <h4 class="pt-2 text-dark ml-2">User 1</h4>
+                    </div>
+                    <div class="handle text-dark">
+                        <a href="#">
+                            <p class="text-muted">
+                                @user1
+                            </p>
+                        </a>
+                    </div>
+                </a>
+                <div class="sidebar">
+                    <a class="menu-item pt-2" style="text-decoration: none; display: flex;" href="index.html">
+                        <span><i class="fas fa-solid fa-house"></i></span>
+                        <h5 class="pl-2">Home</h5>
+                    </a>
+                    <a class="menu-item active pt-2" style="text-decoration: none; display: flex;" href="#">
+                        <span><i class="fas fa-solid fa-magnifying-glass"></i></span>
+                        <h5 class="pl-2">Discover</h5>
+                    </a>
+                    <a class="menu-item pt-2" style="text-decoration: none; display: flex;" href="#">
+                        <span><i class="fas fa-regular fa-envelope"></i></span>
+                        <h5 class="pl-2">Notifications</h5>
+                    </a>
+                    <a class="menu-item pt-2" style="text-decoration: none; display: flex;" href="#">
+                        <span><i class="fas fa-solid fa-bookmark"></i></span>
+                        <h5 class="pl-2">Bookmarks</h5>
+                    </a>
+                    <a class="menu-item pt-2" style="text-decoration: none; display: flex;" href="#">
+                        <span><i class="fas fa-solid fa-camera"></i></span>
+                        <h5 class="pl-2">Recommended</h5>
+                    </a>
+                    <a class="menu-item pt-2 pb-3" style="text-decoration: none; display: flex;" href="#">
+                        <span><i class="fas fa-solid fa-gear"></i></span>
+                        <h5 class="pl-2">Settings</h5>
+                    </a>
+                </div>
+                <label for="create-post fixed-bottom" class="btn btn-dark">Create Post</label>
+            </div>
+        </div>
+    </main>
+
+    <p class="text-muted pt-3" style="position: absolute; bottom:10px; left: 15px; position: fixed;">&copy; 2023
+        SnapShot</p>
+
+
+    <!-- MIDDLE -->
+
+    <div class="middle pt-4">
+        <div class="container pt-3 pb-5 bg-light rounded" style="width: 55rem;">
+            <div class="row row-content justify-content-center">
+                <div class="col-12">
+                    <h5 class="pl-2"><i class="fas fa-solid fa-arrow-trend-up"></i> Trending</h5>
+                </div>
+                <!-- POSTS-->
+                <div class="col-12 pt-4">
+                    <div class="card img-fluid" id="post">
+                        <div class="card-header" style="background-color: white;">
+                            <div style="display: flex;">
+                                <img src="imgs/pfp.jpg" width="30" height="30" id="pfp" />
+                                <p class="card-title pt-1 pl-2"><b>Johnathan Doler </b></p>
+                            </div>
+                            <p>Close-up of a Mountainside in Bareges, France
+                                <b><a href="#" style="text-decoration: none;">#france</a>
+                                    <a href="#" style="text-decoration: none;">#mountain</a><a href="#"
+                                        style="text-decoration: none;"> #morningshoot</a>
+                                </b>
+                            </p>
+                        </div>
+                        <img class="card-img" src="imgs/slide1.jpg" alt="Card image cap" id="post-img" />
+                        <div class="card-body">
+                            <div style="display: flex;">
+                                <p id="post-time" class="card-text text-muted">3 Hours Ago</p>
+                                <p id="post-location" class="card-text text-muted pl-2" style="font-size: 12px;
+                                "><i class="fas fa-solid fa-location-dot"></i> Barèges, Occitanie, France</p>
+                                <i id="post-opt" class="fas fa-regular fa-heart ml-auto" data-toggle="tooltip"
+                                    data-placement="bottom" title="25,251 Likes"></i>
+                                <i id="post-opt" class="fas fa-solid fa-comments pl-3" data-toggle="tooltip"
+                                    data-placement="bottom" title="12,312 Comments"></i>
+                                <i id="post-opt" class="fas fa-solid fa-bookmark pl-3" data-toggle="tooltip"
+                                    data-placement="bottom" title="16,213 Bookmarks"></i>
+                                <i id="post-opt" class="fas fa-solid fa-share pl-3" data-toggle="tooltip"
+                                    data-placement="bottom" title="4,519 Shares"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- RIGHT -->
+    <div id="right-contain" class="container mt-4 bg-light rounded mr-4">
+        <div class=" right">
+            <div class="sidebar">
+                <h5 class="pt-3">Sponsored</h5>
+                <img src="imgs/ad-placeholder.png" width="250vh" />
+                <img class="pt-2" src="imgs/ad-placeholder.png" width="250vh" height="120vh" />
+                <p class="text-muted mt-2" style="font-size: 12px;">Sponsored posts help support <b>SnapShot</b>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- SCRIPTS -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script defer src="app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
+    </script>
+
+
+</body>
+
+</html>

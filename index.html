@@ -11,10 +11,11 @@
 
     <!-- Additional CSS must be placed after Bootstrap CSS -->
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,regular,500,600,700" rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.cs npm --versions" />
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <title>SnapShot</title>
 </head>
@@ -22,174 +23,286 @@
 <body>
 
     <!-- HEADER -->
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top" style="filter: drop-shadow(5px 2px 17px #000);">
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top rounded"
+        style="filter: drop-shadow(5px 2px 17px #d7d7d7);">
         <a class="navbar-brand ml-3" href="index.html"><img src="imgs/logo.png" height="30" width="30" /></a>
-        <button class="btn btn-light" type="button" style="background: transparent;" data-toggle="modal"
-            data-target="#newPost"><i class="fa fa-solid fa-plus"></i></button>
-        <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#snapNavbar">
-            <span class="navbar-toggler-icon navbar-dark"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="snapNavbar">
-            <ul class="navbar-nav ml-auto mr-3">
-                <li class="nav-item active"><a class="nav-link text-dark" href="#"><i class="fa fa-home fa-lg"></i>
-                        Home</a>
-                </li>
-                <li class="nav-item"><a class="nav-link text-dark" href="#"><i class="fa fa-info fa-lg"></i>
-                        About</a></li>
-                <li class="nav-item"><a class="nav-link text-dark" href="contactus.html"><i
-                            class="fa fa-address-card fa-lg"></i>
-                        Contact</a></li>
-            </ul>
+        <nav class="navbar navbar-light">
+            <form class="form-inline">
+                <input class="form-control rounded" id="search" type="search" placeholder="Search SnapShot"
+                    aria-label="Search">
+            </form>
+        </nav>
+        <div class=" dropdown ml-auto mr-3">
+            <img src="imgs/notification.png" class="mr-3" style="width: 25px;
+                height: 25px;
+                border-radius: 50%;" alt="Profile Picture" class="profile-picture dropdown-toggle"
+                id="dropdownMenuButton" data-toggle="#" aria-haspopup="true" aria-expanded="false">
+            <img src="imgs/pfp.jpg" style="width: 40px;
+                height: 40px;
+                border-radius: 50%;" alt="Profile Picture " class="profile-picture dropdown-toggle"
+                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="dropdown-menu dropdown-menu-right mt-3" aria-labelledby="dropdownMenuButton"
+                style="min-width: 250px;">
+                <div class="d-flex align-items-center">
+                    <img class="ml-3" src="imgs/pfp.jpg" style="width: 40px;
+                        height: 40px;
+                        border-radius: 50%;" alt="Profile Picture">
+                    <a class="ml-3" style="text-decoration: none; color: black;">User 1</a>
+                </div>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">My Profile<i
+                        class="fas fa-solid fa-user" style="background-color: #bdbdbd; border-radius: 50%;"></i></a>
+                <a class="dropdown-item  d-flex justify-content-between align-items-center"
+                    href="profilepage.html">Settings &
+                    Privacy<i class="fas fa-solid fa-gear"
+                        style="background-color: #bdbdbd; border-radius: 50%;"></i></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item  d-flex justify-content-between align-items-center" href="#">Log Out<i
+                        class="fas fa-solid fa-right-from-bracket"
+                        style="background-color: #bdbdbd; border-radius: 50%;"></i></a>
+            </div>
         </div>
     </nav>
 
-    <!-- NEW POST MODAL-->
-    <div class="modal fade" id="newPost" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
+    <!-- MAIN -->
+    <main>
+        <div id="left-contain" class="container pt-4 bg-light rounded ml-4 mt-4" style="position: fixed;">
+            <!-- LEFT -->
+            <div class="left">
+                <a class="profile" style="text-decoration: none;">
+                    <div class="profile-pic" style="display: flex;">
+                        <img src="imgs/pfp.jpg" width="40" height="40" id="pfp" />
+                        <h4 class="pt-2 text-dark ml-2">User 1</h4>
+                    </div>
+                    <div class="handle text-dark">
+                        <a href="#">
+                            <p class="text-muted">
+                                @user1
+                            </p>
+                        </a>
+                    </div>
+                </a>
+                <div class="sidebar">
+                    <a class="menu-item active pt-2" style="text-decoration: none; display: flex;" href="#">
+                        <span><i class="fas fa-solid fa-house"></i></span>
+                        <h5 class="pl-2">Home</h5>
+                    </a>
+                    <a class="menu-item pt-2" style="text-decoration: none; display: flex;" href="discover.html">
+                        <span><i class="fas fa-solid fa-magnifying-glass"></i></span>
+                        <h5 class="pl-2">Discover</h5>
+                    </a>
+                    <a class="menu-item pt-2" style="text-decoration: none; display: flex;" href="#">
+                        <span><i class="fas fa-regular fa-envelope"></i></span>
+                        <h5 class="pl-2">Notifications</h5>
+                    </a>
+                    <a class="menu-item pt-2" style="text-decoration: none; display: flex;" href="#">
+                        <span><i class="fas fa-solid fa-bookmark"></i></span>
+                        <h5 class="pl-2">Bookmarks</h5>
+                    </a>
+                    <a class="menu-item pt-2" style="text-decoration: none; display: flex;" href="#">
+                        <span><i class="fas fa-solid fa-camera"></i></span>
+                        <h5 class="pl-2">Recommended</h5>
+                    </a>
+                    <a class="menu-item pt-2 pb-3" style="text-decoration: none; display: flex;" href="#">
+                        <span><i class="fas fa-solid fa-gear"></i></span>
+                        <h5 class="pl-2">Settings</h5>
+                    </a>
+                </div>
+                <a for="create-post fixed-bottom" class="btn btn-dark" data-toggle="modal"
+                    data-target="#postModal">Create Post</a>
+            </div>
+        </div>
+    </main>
+
+    <p class="text-muted pt-3" style="position: absolute; bottom:10px; left: 15px; position: fixed;">&copy; 2023
+        SnapShot</p>
+
+
+
+    <!-- MIDDLE -->
+
+    <!-- POST CREATION -->
+    <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="postModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title modal-dark" id="modalTitle">NEW POST</h5>
+                    <h5 class="modal-title ml-auto" id="postModalTitle"><b>Create Post</b></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <div style="display: flex;">
+                        <img src="imgs/pfp.jpg" width="30" height="30" id="pfp" />
+                        <p class="card-title pt-1 pl-2" style="font-size: 18px;"><b>User 1</b></p>
+                    </div>
+                    <form class="form-inline pt-3">
+                        <input class="form-control ml-2" id="post-text" type="input"
+                            placeholder="What's on your mind, User 1?" aria-label="Post">
+                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" style="background: transparent; color: black;"
-                        data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-primary" style="width: 100%;">Post</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- SIGNUP -->
-    <div class="bg-image" style="background-image: url(imgs/backgroundimage.jpg); height: 550px; background-position: center; background-size: cover;   background-attachment: fixed;
-        ">
-        <div class="container pt-3"
-            style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
-            <div class="row">
-                <div class="col">
-                    <h1 class="text-light" style="filter: drop-shadow(5px 2px 17px #000);">
-                        Join the Newsletter
-                    </h1>
+    <!-- STORIES-->
+    <div class="middle pt-4">
+        <div class="container pt-3 pb-5 bg-light rounded" style="width: 55rem;">
+            <div class="row row-content justify-content-center">
+                <div class="col-12">
+                    <h5 class="pl-2"><i class="fas fa-solid fa-book-open"></i> Stories</h5>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col pt-2">
-                    <input id="email" class="form-control" name="email" placeholder="Enter Email..." style="filter: drop-shadow(5px 2px 17px #000); 
-                        width: 350px; background: transparent;
-                        border: 2px solid white;
-                        color: white;">
-                    </input>
+                <div class="col-md-3">
+                    <div class="card" id="story">
+                        <div class="img-container">
+                            <img class="card-img-top" src="imgs/ourmission.jpg" alt="Post New Story">
+                            <i class="fas fa-solid fa-plus" id="new-story"></i>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text mx-auto">New Story</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col pt-3">
-                    <input type="submit" id="sbtBtn" class="btn btn-md btn-light shadow" name="submit"
-                        style="filter: drop-shadow(5px 2px 17px #000);"></input>
+                <div class="col-md-3">
+                    <div class="card" id="story">
+                        <img class="card-img-top" src="imgs/communitywhyus.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Norman Jole</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
+                <div class="col-md-3">
+                    <div class="card img-fluid" id="story">
+                        <img class="card-img-top" src="imgs/aboutuschris.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Jacob Bryce</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card img-fluid" id="story">
+                        <img class="card-img-top" src="imgs/stories1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">James Rich</p>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- CARDS -->
-    <div class="container pt-5 pb-5">
-        <div class="row row-content">
-            <div class="col col-xs-3 col-md-4">
-                <div class="card" id="infoCard">
-                    <img class="card-img-top" src="imgs/ourmission.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">[OUR MISSION]</h5>
-                        <p class="card-text">At SnapShot we work on empowering small creators and underlooked talent.
-                            Join today to help support the
-                            cause.</p>
+                <!-- TEXT-POST -->
+                <form class="form-inline pt-3" style="display: flex;">
+                    <img src="imgs/pfp.jpg" width="40" height="40" id="pfp" />
+                    <input class="form-control rounded ml-2" id="mind-text" type="post"
+                        placeholder="What's on your mind, User 1?" aria-label="Search">
+                </form>
+
+
+                <!-- POSTS-->
+                <div class="col-12 pt-4">
+                    <div class="card img-fluid" id="post">
+                        <div class="card-header" style="background-color: white;">
+                            <div style="display: flex;">
+                                <img src="imgs/pfp.jpg" width="30" height="30" id="pfp" />
+                                <p class="card-title pt-1 pl-2"><b>Christopher Nolan</b></p>
+                            </div>
+                            <p>Drone shot taken today. Really loved how it turned out! <b><a href="#"
+                                        style="text-decoration: none;">#tokyo</a>
+                                    <a href="#" style="text-decoration: none;">#aerialshot</a><a href="#"
+                                        style="text-decoration: none;"> #b&w</a>
+                                </b></p>
+                        </div>
+                        <img class="card-img" src="imgs/slide2.jpg" alt="Card image cap" id="post-img" />
+                        <div class="card-body">
+                            <div style="display: flex;">
+                                <p id="post-time" class="card-text text-muted">1 Hour Ago</p>
+                                <p id="post-location" class="card-text text-muted pl-2" style="font-size: 12px;
+                                "><i class="fas fa-solid fa-location-dot"></i> Tokyo, Tokyo, Japan</p>
+                                <i id="post-opt" onclick="liked();" class="fas fa-regular fa-heart ml-auto"
+                                    data-toggle="tooltip" data-placement="bottom" title="73 Likes"></i>
+                                <i id="post-opt" class="fas fa-solid fa-comments pl-3" data-toggle="tooltip"
+                                    data-placement="bottom" title="21 Comments"></i>
+                                <i id="post-opt" class="fas fa-solid fa-bookmark pl-3" data-toggle="tooltip"
+                                    data-placement="bottom" title="22 Bookmarks"></i>
+                                <i id="post-opt" class="fas fa-solid fa-share pl-3" data-toggle="tooltip"
+                                    data-placement="bottom" title="13 Shares"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 pt-4">
+                    <div class="card img-fluid" id="post">
+                        <div class="card-header" style="background-color: white;">
+                            <div style="display: flex;">
+                                <img src="imgs/pfp.jpg" width="30" height="30" id="pfp" />
+                                <p class="card-title pt-1 pl-2"><b>Caroline Casky</b></p>
+                            </div>
+                            <p>Pizza delivery driver in Italy, taken on Nikon D750 DSLR Camera. <u></u></p>
+                        </div>
+                        <img class="card-img" src="imgs/slide3.jpg" alt="Card image cap" id="post-img" />
+                        <div class="card-body">
+                            <div style="display: flex;">
+                                <p id="post-time" class="card-text text-muted">1 Hour Ago</p>
+                                <p id="post-location" class="card-text text-muted pl-2" style="font-size: 12px;
+                                "><i class="fas fa-solid fa-location-dot"></i> Tokyo, Tokyo, Japan</p>
+                                <i id="post-opt" class="fas fa-regular fa-heart ml-auto" data-toggle="tooltip"
+                                    data-placement="bottom" title="73 Likes"></i>
+                                <i id="post-opt" class="fas fa-solid fa-comments pl-3" data-toggle="tooltip"
+                                    data-placement="bottom" title="21 Comments"></i>
+                                <i id="post-opt" class="fas fa-solid fa-bookmark pl-3" data-toggle="tooltip"
+                                    data-placement="bottom" title="22 Bookmarks"></i>
+                                <i id="post-opt" class="fas fa-solid fa-share pl-3" data-toggle="tooltip"
+                                    data-placement="bottom" title="13 Shares"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xs-10 col-md-4">
-                <div class="card" id="infoCard">
-                    <img class="card-img-top" src="imgs/communitywhyus.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">[WHY US?]</h5>
-                        <p class="card-text">Our welcoming community loves helping one another and our team will make
-                            sure to help you with any questions.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <div class="card" id="infoCard">
-                    <img class="card-img-top" src="imgs/aboutuschris.jpeg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">[ABOUT US]</h5>
-                        <p class="card-text">Created by <b>Christopher Sotropa.</b> Idea created after seeing countless
-                            talent
-                            on social media being overlooked.</p>
-                    </div>
+        </div>
+
+
+
+        <!-- RIGHT -->
+        <div id="right-contain" class="container mt-4 bg-light rounded mr-4">
+            <div class=" right">
+                <div class="sidebar">
+                    <h5 class="pt-3">Sponsored</h5>
+                    <img src="imgs/ad-placeholder.png" width="250vh" />
+                    <img class="pt-2" src="imgs/ad-placeholder.png" width="250vh" height="120vh" />
+                    <p class="text-muted mt-2" style="font-size: 12px;">Sponsored posts help support <b>SnapShot</b>.
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- INFO -->
-    <div class="container pt-3 pb-5">
-        <div class="row row-content">
-            <div class="col-sm-4 col-xs-12">
-                <div class="offerText">
-                    <h1 class="hidden" style="text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);">
-                        WHAT WE HAVE </br>
-                        TO OFFER</h1>
-                    <p class="p hidden">[A LOT]</p>
-                </div>
-            </div>
-            <div class="col-8 col-xs-12">
-                <p class="p hidden">
-                    Lorem ipsum dolor sit amet. Ut necessitatibus Quis aut error veritatis id temporibus facilis qui
-                    tempora placeat non voluptatem iusto aut omnis sunt. Id dolorem autem est quae enim aut velit
-                    internos et recusandae iste et explicabo facilis qui recusandae veniam. Quo eius molestiae et rerum
-                    delectus ut nobis voluptate aut dolorum placeat quo dolorem tempora a architecto rerum! Rem tempora
-                    tempora ut voluptate adipisci rem fugit facilis vel culpa aliquam et exercitationem unde.
-
-                    Et ducimus excepturi qui quia nesciunt ad obcaecati vitae ut dolor modi quo voluptatibus reiciendis
-                    in ipsa praesentium? Vel quas cumque id possimus velit et blanditiis asperiores.
-                </p>
-            </div>
-        </div>
-    </div>
+        <div class="b-example-divider"></div>
 
 
-    <!-- FOOTER -->
-    <div class="container">
-        <footer class="py-3 my-4">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About Us</a></li>
-                <li class="nav-item"><a href="contactus.html" class="nav-link px-2 text-muted">Contact</a></li>
-            </ul>
-            <p class="text-center text-muted">&copy; 2023 SnapShot</p>
-            <div class="text-right">
-                <a href="#" id="back-to-top" class="btn btn-muted btn-md back-to-top" role="button"
-                    title="Scroll to Top" data-toggle="tooltip" data-placement="left"><i
-                        class="fas fa-solid fa-angle-up"></i></a>
-            </div>
-        </footer>
-    </div>
+        <!-- SCRIPTS -->
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script defer src="app.js"></script>
 
-    <div class="b-example-divider"></div>
+        <script>
+            $(document).ready(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
 
-    <!-- SCRIPTS -->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script defer src="app.js"></script>
+            let mybutton = document.getElementById("btn-back-to-top");
 
-    <script>
-        $(document).ready(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
+
+            mybutton.addEventListener("click", backToTop);
+
+            function backToTop() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+
+
 </body>
 
 </html>

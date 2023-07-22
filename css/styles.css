@@ -1,89 +1,142 @@
 body {
     font-family: "Comfortaa";
+    overflow-x: hidden;
+    color: black;
 }
 
 .navbar {
     background-color: white;
 }
 
-#email::placeholder {
-    color: white;
+
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
-#infoCard {
-    transition: transform .2s;
+#left-contain {
+    width: 13rem;
+    float: left;
 }
 
-#infoCard:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+#right-contain {
+    width: 17rem;
+    position: fixed;
+    right: 0;
+    top: 4rem;
 }
 
-.hidden {
-    opacity: 0;
-    transition: all 1s;
-    transform: translateX(-100%);
-    filter: blur(5px);
+.menu-item h5 {
+    color: black;
 }
 
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
+.menu-item i {
+    color: black;
 }
 
-@media(prefers-reduced-motion) {
-    .hidden {
-        transition: none;
+@media (max-width: 820px) {
+    .menu-item h5 {
+        display: none;
+        /* Hide the h5 element on small screens */
+    }
+
+    #left-contain {
+        display: none;
     }
 }
 
-.p :nth-child() {
-    transition: 200ms;
+#search {
+    border: 0px;
+    background-color: rgb(239, 239, 239);
+    width: 400px;
 }
 
-.hidden2 {
-    opacity: 0;
-    transition: all 1s;
-    transform: translateX(100%);
-    filter: blur(5px);
-}
-
-.show2 {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-}
-
-@media(prefers-reduced-motion) {
-    .hidden2 {
-        transition: none;
+@media (max-width: 630px) {
+    #search {
+        width: 200px;
     }
 }
 
-#sbtBtn {
-    border: 2px solid white;
-    width: 7rem;
-    background-color: transparent;
-    color: white;
-    transition: background-color 0.3s;
+#new-story {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    transition: color 1s;
 }
 
-#sbtBtn:hover {
+#new-story:hover {
+    color: grey;
+}
+
+.card-text {
+    font-size: 15px;
+}
+
+.card-img-top {
+    height: 130px;
+}
+
+#story {
+    border: 2px solid rgb(127, 142, 255);
+}
+
+#mind-text {
+    width: 50rem;
+}
+
+#post {
     background-color: white;
-    color: black;
+    border: none;
 }
 
-#sendFeed {
-    border: 2px solid black;
-    width: 7rem;
+#post-time {
+    font-size: 12px;
+}
+
+#post-opt {
+    font-size: 18px;
+}
+
+@media screen and (max-width: 400px) {
+
+    /* Adjust card width and height for smaller screens */
+    #post {
+        width: 60vh;
+        height: 50vh;
+    }
+}
+
+.sidebar>.active>h5 {
+    color: rgb(127, 142, 255);
+}
+
+.sidebar>.active>span>i {
+    color: rgb(127, 142, 255);
+}
+
+#pfp {
+    border-radius: 50%;
+}
+
+.btn {
+    background-color: rgb(127, 142, 255);
+    border: none;
+}
+
+#post-text {
+    width: 200vh;
+    height: 25vh;
     background-color: transparent;
-    color: black;
-    transition: background-color 0.3s;
+    border: none;
+    font-size: 18px;
+
 }
 
-
-#sendFeed:hover {
-    background-color: black;
-    color: white;
+#post-text::placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

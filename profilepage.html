@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,regular,500,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue:regular" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>SnapShot</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top rounded"
+        style="filter: drop-shadow(5px 2px 17px #d7d7d7);">
+        <a class="navbar-brand ml-3" href="index.html"><img src="imgs/logo.png" height="30" width="30" /></a>
+        <nav class="navbar navbar-light">
+            <form class="form-inline">
+                <input class="form-control rounded" id="search" type="search" placeholder="Search SnapShot"
+                    aria-label="Search">
+            </form>
+        </nav>
+        <div class=" dropdown ml-auto mr-3">
+            <img src="imgs/notification.png" class="mr-3" style="width: 25px;
+                height: 25px;
+                border-radius: 50%;" alt="Profile Picture" class="profile-picture dropdown-toggle"
+                id="dropdownMenuButton" data-toggle="#" aria-haspopup="true" aria-expanded="false">
+            <img src="imgs/pfp.jpg" style="width: 40px;
+                height: 40px;
+                border-radius: 50%;" alt="Profile Picture " class="profile-picture dropdown-toggle"
+                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="dropdown-menu dropdown-menu-right mt-3" aria-labelledby="dropdownMenuButton"
+                style="min-width: 250px;">
+                <div class="d-flex align-items-center">
+                    <img class="ml-3" src="imgs/pfp.jpg" style="width: 40px;
+                        height: 40px;
+                        border-radius: 50%;" alt="Profile Picture">
+                    <a class="ml-3" style="text-decoration: none; color: black;">User 1</a>
+                </div>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">My Profile<i
+                        class="fas fa-solid fa-user" style="background-color: #bdbdbd; border-radius: 50%;"></i></a>
+                <a class="dropdown-item  d-flex justify-content-between align-items-center" href="#">Settings &
+                    Privacy<i class="fas fa-solid fa-gear"
+                        style="background-color: #bdbdbd; border-radius: 50%;"></i></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item  d-flex justify-content-between align-items-center" href="#">Log Out<i
+                        class="fas fa-solid fa-right-from-bracket"
+                        style="background-color: #bdbdbd; border-radius: 50%;"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <div class="middle pt-4">
+        <div class="container pt-3 pb-5 bg-light rounded" style="width: 100rem;">
+            <div class="row row-content justify-content-center">
+                <div class="col-12">
+                    <h4 class="pl-2"><i class="fas fa-solid fa-user"></i> My Profile</h4>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <form class="pt-3">
+                    <div class="form-group row">
+                        <label for="firstName" class="col-md-2 col-form-label">First Name</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                placeholder="First Name" />
+                        </div>
+                        <div class="offset-md-2 col-md-2">
+                            <button type="submit" id="sendFeed" class="btn btn-md btn-dark text-nowrap">Edit <i
+                                    class="fas fa-solid fa-user-pen"></i></button>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="lastName" class="col-md-2 col-form-label">Last Name</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="lastName" name="lastName"
+                                placeholder="Last Name" />
+                        </div>
+                        <div class="offset-md-2 col-md-2">
+                            <button type="submit" id="sendFeed" class="btn btn-md btn-dark text-nowrap">Edit <i
+                                    class="fas fa-solid fa-user-pen"></i></button>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="userName" class="col-md-2 col-form-label">User Name</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="userName" name="userName" placeholder="@" />
+                        </div>
+                        <div class="offset-md-2 col-md-2">
+                            <button type="submit" id="sendFeed" class="btn btn-md btn-dark text-nowrap">Edit <i
+                                    class="fas fa-solid fa-user-pen"></i></button>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="email" class="col-md-2 col-form-label">Email</label>
+                        <div class="col-md-10">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">2FA</label>
+                        <div class="col-md-10">
+                            <div class="col-md-5">
+                                <button type="submit" id="2fa-enable" class="btn btn-md btn-dark text-nowrap">Enable <i
+                                        class="fas fa-solid fa-check"></i></button>
+                            </div>
+                            <div class="col-md-5">
+                                <button type="submit" id="2fa-disable"
+                                    class="btn btn-md btn-dark text-nowrap mt-2">Disable
+                                    <i class="fas fa-solid fa-x"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
+                        <div class="col-md-10">
+                            <textarea class="form-control" id="feedback" name="feedback" rows="8"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-md-2 col-md-10">
+                            <button type="submit" id="sendFeed" class="btn btn-md btn-dark shadow text-nowrap" style="filter:
+                                    drop-shadow(5px 2px 17px #d6d6d6);">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- FOOTER -->
+    <div class="container">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About Us</a></li>
+                <li class="nav-item"><a href="contactus.html" class="nav-link px-2 text-muted">Contact</a>
+                </li>
+            </ul>
+            <p class="text-center text-muted">&copy; 2023 SnapShot</p>
+            <div class="text-right">
+                <a href="#" id="back-to-top" class="btn btn-muted btn-md back-to-top" role="button"
+                    title="Scroll to Top" data-toggle="tooltip" data-placement="left"><i
+                        class="fas fa-solid fa-angle-up"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+
+    <!-- SCRIPTS -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script defer src="app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
+    </script>
+
+
+</body>
+
+</html>
