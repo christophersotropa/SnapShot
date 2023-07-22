@@ -10,11 +10,11 @@ body {
     color: white;
 }
 
-.card {
+#infoCard {
     transition: transform .2s;
 }
 
-.card:hover {
+#infoCard:hover {
     transform: scale(1.05);
     box-shadow: 0 0 11px rgba(33, 33, 33, .2);
 }
@@ -59,4 +59,31 @@ body {
     .hidden2 {
         transition: none;
     }
+}
+
+#sbtBtn {
+    border: 2px solid white;
+    width: 7rem;
+    background-color: transparent;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#sbtBtn:hover {
+    background-color: white;
+    color: black;
+}
+
+#sendFeed {
+    border: 2px solid black;
+    width: 7rem;
+    background-color: transparent;
+    color: black;
+    transition: background-color 0.3s;
+}
+
+
+#sendFeed:hover {
+    background-color: black;
+    color: white;
 }

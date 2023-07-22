@@ -11,10 +11,10 @@
 
     <!-- Additional CSS must be placed after Bootstrap CSS -->
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,regular,500,600,700" rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.cs npm --versions" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <title>SnapShot</title>
 </head>
@@ -36,7 +36,8 @@
                 </li>
                 <li class="nav-item"><a class="nav-link text-dark" href="#"><i class="fa fa-info fa-lg"></i>
                         About</a></li>
-                <li class="nav-item"><a class="nav-link text-dark" href="#"><i class="fa fa-address-card fa-lg"></i>
+                <li class="nav-item"><a class="nav-link text-dark" href="contactus.html"><i
+                            class="fa fa-address-card fa-lg"></i>
                         Contact</a></li>
             </ul>
         </div>
@@ -71,7 +72,9 @@
             style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
             <div class="row">
                 <div class="col">
-                    <h1 class="text-light" style="filter: drop-shadow(5px 2px 17px #000);">Join the Newsletter</h1>
+                    <h1 class="text-light" style="filter: drop-shadow(5px 2px 17px #000);">
+                        Join the Newsletter
+                    </h1>
                 </div>
             </div>
             <div class="row">
@@ -85,7 +88,7 @@
             </div>
             <div class="row">
                 <div class="col pt-3">
-                    <input type="submit" class="btn btn-md btn-light shadow" name="submit"
+                    <input type="submit" id="sbtBtn" class="btn btn-md btn-light shadow" name="submit"
                         style="filter: drop-shadow(5px 2px 17px #000);"></input>
                 </div>
             </div>
@@ -96,7 +99,7 @@
     <div class="container pt-5 pb-5">
         <div class="row row-content">
             <div class="col col-xs-3 col-md-4">
-                <div class="card">
+                <div class="card" id="infoCard">
                     <img class="card-img-top" src="imgs/ourmission.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">[OUR MISSION]</h5>
@@ -107,7 +110,7 @@
                 </div>
             </div>
             <div class="col-xs-10 col-md-4">
-                <div class="card">
+                <div class="card" id="infoCard">
                     <img class="card-img-top" src="imgs/communitywhyus.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">[WHY US?]</h5>
@@ -117,7 +120,7 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-4">
-                <div class="card">
+                <div class="card" id="infoCard">
                     <img class="card-img-top" src="imgs/aboutuschris.jpeg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">[ABOUT US]</h5>
@@ -163,9 +166,14 @@
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About Us</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact</a></li>
+                <li class="nav-item"><a href="contactus.html" class="nav-link px-2 text-muted">Contact</a></li>
             </ul>
             <p class="text-center text-muted">&copy; 2023 SnapShot</p>
+            <div class="text-right">
+                <a href="#" id="back-to-top" class="btn btn-muted btn-md back-to-top" role="button"
+                    title="Scroll to Top" data-toggle="tooltip" data-placement="left"><i
+                        class="fas fa-solid fa-angle-up"></i></a>
+            </div>
         </footer>
     </div>
 
@@ -177,6 +185,11 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script defer src="app.js"></script>
 
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 
 </html>
